@@ -1,66 +1,30 @@
-# Securisé un serveur Express
+# Event Express
+Event Express est un projet réaliser avec le framework Express.js.
 
-## Introduction
+Ce projet a pour but de regrouper différents concepts et bonne pratiques de développement web avec Express.js.
 
-Ce projet a pour but de sécuriser un serveur Express en utilisant des middlewares et des bonnes pratiques de sécurité. Il est important de protéger les applications web contre les attaques courantes telles que les injections SQL, les attaques XSS, CSRF, request rating, etc.
+## Points abordés
 
-## Objectifs
+### Langage
+- Utilisation de TypeScript
+- Utilisation de Node.js
 
-- Mettre en place des middlewares de sécurité pour protéger le serveur Express.
-- Utiliser des bonnes pratiques de sécurité pour protéger les données sensibles.
-- Protéger les routes sensibles avec des authentifications et des autorisations.
-- Protéger les données sensibles avec des algorithmes de hachage et de cryptage.
+### Automatisation / Uniformisation
+- Automatisation du formatage du code avec Prettier (et Husky)
 
-## Installation
-
-1. Cloner le dépôt :
-   ```bash
-   git clone
-    cd securise-express-server
-   ```
-2. Installer les dépendances :
-
-   ```bash
-   npm install
-   ```
-
-3. Lancer le serveur :
-   ```bash
-    npm start
-   ```
-4. Accéder à l'application :
-   Ouvrir un navigateur et accéder à `http://localhost:3000`.
-5. Tester les routes :
-   Utiliser Postman ou un autre outil pour tester les routes de l'API.
-   - GET /api/users
-   - POST /api/users
-   - GET /api/users/:id
-   - PUT /api/users/:id
-   - DELETE /api/users/:id
-
-## Mise en place du projet
-
-### Installation base de Express
-
-Pour utiliser Typescript avec Express, il existe différentes solutions:
-
-- Via la transcompilation de "typescript"
-- Via un "runner" typeScript (ts-node, tsx)
-- Via un environnement différent (bun.js, deno)- **(New)** En natif, via le "strip-types" (experimental)
-
-[Documentation TypeScript en Node](https://nodejs.org/en/learn/typescript/introduction) \
-Choix pour la démo : le runner « tsx »
-
-#### Packages
-
-```
-npm i express@5 morgan cors
-npm i -D typescript tsx
-npm i -D @types/express@5 @types/node @types/morgan @types/cors
-```
-
-#### Config de TypeScript
-
-```
-npx tsc --init
-```
+### Développement
+- [ ] Utilisation de Express.js pour la création d'une API RESTful
+- [ ] Utilisation de dotenv pour la gestion des variables d'environnement
+- [ ] Utilisation de Express Validator pour la validation des données d'entrée
+- [ ] Utilisation de CORS pour la gestion des requêtes cross-origin
+- [ ] Utilisation de Helmet pour la sécurité des en-têtes HTTP
+- [ ] Utilisation de Morgan pour le logging des requêtes HTTP
+- [ ] Utilisation de Swagger pour la documentation de l'API
+- [ ] Utilisation de TypeORM pour interagir avec une base de données PostgreSQL
+- [ ] Utilisation de bcrypt pour le hachage des mots de passe
+- [ ] Utilisation de JSON Web Tokens (JWT) pour l'authentification
+- [ ] Utilisation de OAuth2 pour l'authentification avec des fournisseurs externes (Google, Facebook, etc.)
+- [ ] Utilisation de Nodemailer pour l'envoi d'e-mails
+- [ ] Utilisation de Multer pour la gestion des fichiers uploadés
+- [ ] Utilisation de Winston pour le logging des erreurs
+- [ ] Utilisation de Jest pour les tests unitaires
