@@ -1,10 +1,14 @@
-# installation de TypeORM avec PostgreSQL
+# Mise en place de la base de données
 
-npm install typeorm --save
-npm install reflect-metadata --save
-npm install pg --save
+## installation de TypeORM avec PostgreSQL
 
-# configuration
+```bash
+npm install typeorm
+npm install reflect-metadata
+npm install pg
+```
+
+## configuration
 
 in app.ts:
 
@@ -20,6 +24,6 @@ Dans le fichier tsconfig.json:
 "strict": false,
 ```
 
-# création de la base de données et des models
+## Création de l'instance de la base de données
 
-WIP
+Créer un dossier `src/database` et un fichier `index.ts` à l'intérieur.

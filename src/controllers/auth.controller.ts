@@ -1,6 +1,6 @@
 import type { Request, Response } from 'express';
 import { utilisateurRepo } from '../core/database';
-import { UtilisateurDto } from '../dtos/out/utilisateur.dto';
+import { UtilisateurDto } from '../dtos/output/utilisateur.dto';
 import * as bcrypt from 'bcrypt';
 import { Utilisateur } from '../core/database/models/utilisateur.model';
 import jwt from 'jsonwebtoken';

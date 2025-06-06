@@ -1,12 +1,17 @@
 import { Router } from 'express';
-import systemRouter from './system.router';
-import utilisateurRouter from './utilisateur.router';
-import authRouter from './auth.router';
+import welcomeController from '../controllers/welcome.controller';
+import authController from '../controllers/auth.controller';
+import utilisateurController from '../controllers/utilisateur.controller';
 
-const mainRouter = Router();
+const routes = Router();
 
-mainRouter.use('/system', systemRouter);
-mainRouter.use('/utilisateur', utilisateurRouter);
-mainRouter.use('/auth', authRouter);
+routes.route('/welcome').get(welcomeController.home);
 
-export default mainRouter;
+routes.route('/auth/login').post(authController.login);
+routes.route('/auth/register').post(authController.register);
+
+routes.route('/user/consumer').get(utilisateurController.consumer);
+routes.route('/user').get(utilisateurController.userList);
+routes.route('/user/:id').get(utilisateurController.userDetail);
+
+export default routes;
